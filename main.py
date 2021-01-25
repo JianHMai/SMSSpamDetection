@@ -22,7 +22,7 @@ with open('dataset.csv') as f:
                 text = preprocess(word_tokenize(messages))
             for classification in row[:1]:
                 classify = classification
-            # Write each classfication to new proceesed file    
+            # Write each classification to new proceesed file    
             new_file.write(classify + "," + text + "\n")
     new_file.close()
 f.close()
