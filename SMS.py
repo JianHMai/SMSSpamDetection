@@ -2,7 +2,7 @@ from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 import string
 
-# Remove stopwords and punctuation
+# Remove stopwords
 def preprocess(line):
     # Used to stem the words
     ps = PorterStemmer()
