@@ -25,8 +25,12 @@ def get_data():
     return X_train, X_test, y_train, y_test
 
 # Train model
-#def train():
-    # Used to vectorize words
+#def train(X_train, y_train):
+    
 
-if __name__ == '__main__':
-    x_train, x_test, y_train, y_test = get_data()
+# Used to validate model accuracy
+"""def validate_model(model, X_test, y_test):
+    # Use X training data to predict using the model
+    y_predict = model.predict(X_test)
+    # Used to measure accuracy of model
+    print(sklearn.metrics.classification_report(y_test, y_predict))"""
