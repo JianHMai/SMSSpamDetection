@@ -15,14 +15,14 @@ with open('dataset.csv') as f:
     with open('processed.csv','w',encoding='UTF-8') as new_file:
         for row in reader:
             for messages in row[1:-3]:
-                # Keep only ASCII letters and numbers
-                re.sub('[^a-zA-Z0-9]+', '', messages)
                 # Remove all non alphabetic letters 
                 encoded_string = messages.encode("ascii", "ignore")
                 messages = encoded_string.decode()
+                # Call word tokenize for each row of messages
                 text = preprocess(word_tokenize(messages))
             for classification in row[:1]:
                 classify = classification
+            # Write each classfication to new proceesed file    
             new_file.write(classify + "," + text + "\n")
     new_file.close()
 f.close()

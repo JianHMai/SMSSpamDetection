@@ -32,10 +32,10 @@ def get_data():
 def train(X_train, y_train):
     # Used to vectorize words
     vectorizer = CountVectorizer()
-    neigh = KNeighborsClassifier(n_neighbors=1)
+    kn = KNeighborsClassifier(n_neighbors=1)
 
     # Used to build a composite estimator using vectorizer and SVM 
-    model = Pipeline([('vectorizer', vectorizer), ('neigh', neigh)])
+    model = Pipeline([('vectorizer', vectorizer), ('kn', kn)])
     model.fit(X_train,y_train)
 
     # Save model 
