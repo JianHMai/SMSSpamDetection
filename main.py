@@ -1,7 +1,7 @@
 from SMS import preprocess
 from train import get_data
-#from train import train
-#from train import validate_model
+from train import train
+from train import validate_model
 from nltk.tokenize import word_tokenize
 import re
 import string
@@ -26,7 +26,7 @@ with open('dataset.csv') as f:
             new_file.write(classify + "," + text + "\n")
     new_file.close()
 f.close()
-    
+
 X_train, X_test, y_train, y_test = get_data()
-#model = train(X_train, y_train)
-#validate_model(model, X_test, y_test)
+model = train(X_train, y_train)
+validate_model(model, X_test, y_test)
