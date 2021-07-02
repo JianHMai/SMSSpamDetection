@@ -2,10 +2,10 @@ from SMS import preprocess
 from train import get_data
 from train import train
 from train import validate_model
+from nltk.tokenize import word_tokenize
 import re
 import string
 import io
-from nltk.tokenize import word_tokenize
 import csv
 
 with open('dataset.csv') as f:
